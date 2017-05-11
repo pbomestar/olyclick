@@ -1,0 +1,12 @@
+body {
+	background-image: url("../image/bgd1.png");
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+video {
+	position: absolute;
+	bottom: 0px;
+	width: 100%    !important;
+	height: auto   !important;
+}
