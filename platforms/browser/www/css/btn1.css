@@ -13,7 +13,6 @@ a.button {
     text-decoration: none;
     text-shadow: 0 1px 0 #fafafa; 
 
-    transition: margin 0.1s; /* to give margin animation time to come back */
 }
     
 a.button:active {
@@ -27,10 +26,9 @@ a.button:active {
     /*box-shadow: inset 0 10px 15px 0 #c4c4c4;*/
     /*top:2px;*/
     outline: 0px solid transparent;
-    transition: margin 0.1s; /* margin transition */
 }
 
-a.button.dsgnmoo {
+a.button.continue {
     bottom: 20px;
     right: 30px;
     width: 150px;
@@ -46,9 +44,18 @@ a.button.dsgnmoo {
     box-shadow: inset 0 0 0 1px #e67e7b;
     color: #fff;
     text-shadow: 0 1px 0 #bd2524; 
+    transition: margin 0.1s; /* to give margin animation time to come back */
+
+
+-webkit-transform: translate3d(0px,0px,0px);
+   -moz-transform: translate3d(0px,0px,0px);
+   -ms-transform: translate3d(0px,0px,0px);
+   -o-transform: translate3d(0px,0px,0px);
+   transform: translate3d(0px,0px,0px); 
+
 }
     
-a.button.dsgnmoo:active {
+a.button.continue:active {
     background: #ce2424;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ce2424), to(#f97779));
     background: -moz-linear-gradient(#ce2424, #f97779);
@@ -57,6 +64,7 @@ a.button.dsgnmoo:active {
     border-radius: 50px;
     border-bottom: solid 3px #bd2524;
     box-shadow: inset 0 0 0 1px #e67e7b; /* box-shadow: inset 0 10px 15px 0 #bd2524; */ 
-    margin-bottom: -7px;
+    /*bottom: -7px;*/
+    /*transition: bottom 0.1s; */
 }
     
