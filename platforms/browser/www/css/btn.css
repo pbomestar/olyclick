@@ -1,0 +1,57 @@
+a.button {
+    position: absolute;
+    
+    font-family: "bomafont2";
+
+    text-align: center;
+    text-decoration: none;
+
+    background: #f97779;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f97779), to(#ce2424));
+    background: -moz-linear-gradient(#f97779, #ce2424);
+    background: linear-gradient(#f97779, #ce2424);
+    border: solid 1px #be2424;
+    border-bottom: solid 3px #bd2524;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 1px #e67e7b;
+    color: #fff;
+    text-shadow: 0 1px 0 #bd2524; 
+}
+a.button.clicked{
+    background: #ce2424;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ce2424), to(#f97779));
+    background: -moz-linear-gradient(#ce2424, #f97779);
+    background: linear-gradient(#ce2424, #f97779);
+}
+
+a.button.start {
+    display: block;
+    bottom: 20px;
+    right: 30px;
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+}
+
+
+div.button-group{
+    position: relative;
+    display: block;
+    width: 142px;
+    padding: 0;
+    margin: auto;
+    margin-top: 250px;
+    text-align: center;
+}
+
+a.button.newgame, a.button.continue, a.button.help, a.button.quit {
+    /*display: none;*/
+    display: block;
+    position: relative;
+    width: 140px;
+    height: 45px;
+    margin: 15px 0;
+    line-height: 45px;
+    font-size: 20px;
+}
