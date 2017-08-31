@@ -2,11 +2,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     // Now safe to use the PhoneGap API
-}
 
-$(document).ready(function() {    
-   
-	$('a.button.start, a.button.newgame, a.button.continue, a.button.help, a.button.quit').click(btnClick);
+	$('a.button.start, a.button.newgame, a.button.continue, a.button.help, a.button.quit, a.button.yesquit, a.button.noquit').click(btnClick);
 
 
 
@@ -53,9 +50,13 @@ $(document).ready(function() {
 			case 'Quit':
 				wannaQuit();
 				break;
-
-
-				
+			case 'Yes':
+				yesQuit();
+				break;
+			case 'No':
+				noQuit();
+				break;
+						
 			default:
 				console.log('Nista');
 		}
@@ -64,8 +65,26 @@ $(document).ready(function() {
 
 ///////////////////////////////////////////////////////////
 
-
-		// hideBtnGroup();
+	function loadNewGame(){
+		hideBtnGroup();
+	}
+	function selectGame(){
+		hideBtnGroup();
+	}
+	function getSomeHelp(){
+		hideBtnGroup();
+	}
+	function wannaQuit(){
+		hideBtnGroup();
+		showYesNoBtns();
+	}
+	function yesQuit(){
+		navigator.app.exitApp();
+	}
+	function noQuit(){
+		hideYesNoBtns();
+		showBtnGroup();
+	}
 
 
 ///////////// Hide the intro section /////////////////////
@@ -106,5 +125,11 @@ $(document).ready(function() {
 		$('a.button.quit, a.button.help, a.button.continue, a.button.newgame').velocity({ opacity: 0 }, 100, { display: "none" });
 	}
 
-});
+	function showYesNoBtns() {
+		$('a.button.yesquit, a.button.noquit').velocity({ opacity: 1 }, { display: "inline-block" });;
+	}
+	function hideYesNoBtns() {
+		$('a.button.yesquit, a.button.noquit').velocity({ opacity: 0 }, 100, { display: "none" });;
+	}
 
+}

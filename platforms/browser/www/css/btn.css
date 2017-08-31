@@ -55,3 +55,22 @@ a.button.newgame, a.button.continue, a.button.help, a.button.quit {
     line-height: 45px;
     font-size: 20px;
 }
+div.yesnoquit {
+    position: relative;
+    /*display: block;*/
+    width: 142px;
+    padding: 0;
+    margin: auto;
+    margin-top: 250px;
+    text-align: center;
+}
+a.button.yesquit, a.button.noquit {
+    display: none;
+    /*display: block;*/
+    position: relative;
+    width: 100px;
+    height: 45px;
+    margin: 15px 0;
+    line-height: 45px;
+    font-size: 20px;
+}
